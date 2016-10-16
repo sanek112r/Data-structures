@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace BH
 {
-    class PriorityQueue<T> where T : IComparable<T>
+    class PriorityQueue<T> : IEnumerable<T> where T : IComparable<T>
     {
         private readonly List<T> _data = new List<T>();
 
@@ -52,7 +53,7 @@ namespace BH
                 }
             }
 
-            Console.WriteLine("Dequeed:" + res);
+            //Console.WriteLine("Dequeed:" + res);
 
             return res;
         }
@@ -75,6 +76,16 @@ namespace BH
             var temp = _data[pos1];
             _data[pos1] = _data[pos2];
             _data[pos2] = temp;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return _data.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

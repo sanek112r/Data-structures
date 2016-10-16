@@ -12,19 +12,31 @@ namespace BH
     {
         static void Main(string[] args)
         {
-            PriorityQueueExample();
+            //    PriorityQueueExample();
 
-            BinarySearchExample();
+            //    BinarySearchExample();
 
-            DequeueExample();
+            //    DequeueExample();
 
-            QuickSortExample();
+            //    QuickSortExample();
 
-            MergeSortExample();
+            //    MergeSortExample();
 
-            LargestCommonSubstringExample();
+            //    LargestCommonSubstringExample();
+
+            HuffmanCodeExample();
 
             Console.Read();
+        }
+
+        private static void HuffmanCodeExample()
+        {
+            Console.WriteLine();
+            var hc = new HuffmanCode("mississippi river");
+            var encoded = hc.Encode();
+
+            Console.WriteLine("Encoded:" + encoded);
+            Console.WriteLine("Decoded:" + hc.Decode(encoded));
         }
 
         private static void BinarySearchExample()

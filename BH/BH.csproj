@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BinarySearcher.cs" />
     <Compile Include="Dequeue.cs" />
+    <Compile Include="HuffmanCode.cs" />
     <Compile Include="MergeSorter.cs" />
     <Compile Include="PriorityQueue.cs" />
     <Compile Include="Program.cs" />
